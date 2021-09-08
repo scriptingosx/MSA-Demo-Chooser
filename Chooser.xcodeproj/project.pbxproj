@@ -23,7 +23,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		C653D6B526E8EAEF00E6D6EE /* Chooser */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Chooser; sourceTree = BUILT_PRODUCTS_DIR; };
+		C653D6B526E8EAEF00E6D6EE /* chooser */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = chooser; sourceTree = BUILT_PRODUCTS_DIR; };
 		C653D6B826E8EAEF00E6D6EE /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -49,7 +49,7 @@
 		C653D6B626E8EAEF00E6D6EE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C653D6B526E8EAEF00E6D6EE /* Chooser */,
+				C653D6B526E8EAEF00E6D6EE /* chooser */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -65,9 +65,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C653D6B426E8EAEF00E6D6EE /* Chooser */ = {
+		C653D6B426E8EAEF00E6D6EE /* chooser */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C653D6BC26E8EAEF00E6D6EE /* Build configuration list for PBXNativeTarget "Chooser" */;
+			buildConfigurationList = C653D6BC26E8EAEF00E6D6EE /* Build configuration list for PBXNativeTarget "chooser" */;
 			buildPhases = (
 				C653D6B126E8EAEF00E6D6EE /* Sources */,
 				C653D6B226E8EAEF00E6D6EE /* Frameworks */,
@@ -77,9 +77,9 @@
 			);
 			dependencies = (
 			);
-			name = Chooser;
+			name = chooser;
 			productName = Chooser;
-			productReference = C653D6B526E8EAEF00E6D6EE /* Chooser */;
+			productReference = C653D6B526E8EAEF00E6D6EE /* chooser */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -110,7 +110,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C653D6B426E8EAEF00E6D6EE /* Chooser */,
+				C653D6B426E8EAEF00E6D6EE /* chooser */,
 			);
 		};
 /* End PBXProject section */
@@ -248,6 +248,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JME5BW3F3R;
 				ENABLE_HARDENED_RUNTIME = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -259,6 +260,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JME5BW3F3R;
 				ENABLE_HARDENED_RUNTIME = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -276,7 +278,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C653D6BC26E8EAEF00E6D6EE /* Build configuration list for PBXNativeTarget "Chooser" */ = {
+		C653D6BC26E8EAEF00E6D6EE /* Build configuration list for PBXNativeTarget "chooser" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C653D6BD26E8EAEF00E6D6EE /* Debug */,
