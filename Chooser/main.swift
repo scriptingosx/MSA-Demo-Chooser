@@ -9,15 +9,9 @@ import Foundation
 
 let urlScheme = "http"
 
-guard let url = URL(string: "\(urlScheme):") else { exit(1) }
+let appURLs = LSKit.urls(for: urlScheme)
 
-if let cfAppURLs = LSCopyApplicationURLsForURL(url as CFURL, .all) {
-    let appURLs = cfAppURLs.takeRetainedValue() as Array
-    
-    for cfAppURL in appURLs {
-        if let appURL = cfAppURL as? URL {
-            print(appURL.path)
-        }
-    }
+for appURL in appURLs {
+    print(appURL.path)
 }
 
