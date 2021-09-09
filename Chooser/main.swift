@@ -6,17 +6,19 @@
 //
 
 import Foundation
+import ArgumentParser
 
-let arguments = CommandLine.arguments.dropFirst()
+struct Chooser: ParsableCommand {
+    @Argument var urlScheme: String
+    
+    func run() {
+        let appURLs = LSKit.urls(for: urlScheme)
 
-guard let urlScheme = arguments.first else {
-    print("usage: chooser <urlscheme>")
-    exit(1)
+        for appURL in appURLs {
+            print(appURL.path)
+        }
+
+    }
 }
 
-let appURLs = LSKit.urls(for: urlScheme)
-
-for appURL in appURLs {
-    print(appURL.path)
-}
-
+Chooser.main()
