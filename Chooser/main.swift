@@ -7,7 +7,12 @@
 
 import Foundation
 
-let urlScheme = "http"
+let arguments = CommandLine.arguments.dropFirst()
+
+guard let urlScheme = arguments.first else {
+    print("usage: chooser <urlscheme>")
+    exit(1)
+}
 
 let appURLs = LSKit.urls(for: urlScheme)
 
