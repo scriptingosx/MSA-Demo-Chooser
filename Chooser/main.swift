@@ -11,7 +11,7 @@ import ArgumentParser
 struct Chooser: ParsableCommand {
     static var configuration = CommandConfiguration(
             abstract: "Read and set default URL scheme handlers.",
-            subcommands: [List.self, Default.self],
+            subcommands: [List.self, Default.self, Set.self],
             defaultSubcommand: List.self)
 
     struct List: ParsableCommand {
@@ -32,6 +32,21 @@ struct Chooser: ParsableCommand {
         func run() {
             let appURL = LSKit.defaultURL(for: urlScheme)
             print(appURL?.path ?? "no default app found")
+        }
+    }
+    
+    struct Set: ParsableCommand {
+        @Argument var urlScheme: String
+        @Argument var identifier: String
+        
+        func run() {
+            let result = LSKit.setDefault(identifier: identifier, for: urlScheme)
+            
+            if result == 0 {
+                print("set \(identifier) for \(urlScheme)")
+            } else {
+                print("cannot set default app for \(urlScheme) (error \(result))")
+            }
         }
     }
 }
