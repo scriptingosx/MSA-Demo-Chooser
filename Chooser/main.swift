@@ -9,15 +9,21 @@ import Foundation
 import ArgumentParser
 
 struct Chooser: ParsableCommand {
-    @Argument var urlScheme: String
-    
-    func run() {
-        let appURLs = LSKit.urls(for: urlScheme)
+    static var configuration = CommandConfiguration(
+            abstract: "Read and set default URL scheme handlers.",
+            subcommands: [List.self],
+            defaultSubcommand: List.self)
 
-        for appURL in appURLs {
-            print(appURL.path)
+        struct List: ParsableCommand {
+        @Argument var urlScheme: String
+        
+        func run() {
+            let appURLs = LSKit.urls(for: urlScheme)
+
+            for appURL in appURLs {
+                print(appURL.path)
+            }
         }
-
     }
 }
 
