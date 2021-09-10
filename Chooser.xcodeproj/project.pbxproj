@@ -65,7 +65,9 @@
 				C6AF38B526EB5B09001E3AB5 /* ChooserUI */,
 				C653D6B626E8EAEF00E6D6EE /* Products */,
 			);
+			indentWidth = 2;
 			sourceTree = "<group>";
+			tabWidth = 2;
 		};
 		C653D6B626E8EAEF00E6D6EE /* Products */ = {
 			isa = PBXGroup;
