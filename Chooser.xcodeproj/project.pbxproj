@@ -10,6 +10,7 @@
 		C653D6B926E8EAEF00E6D6EE /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C653D6B826E8EAEF00E6D6EE /* main.swift */; };
 		C653D6C026E8EDB200E6D6EE /* LSKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C653D6BF26E8EDB200E6D6EE /* LSKit.swift */; };
 		C653D6E026EA357400E6D6EE /* ArgumentParser in Frameworks */ = {isa = PBXBuildFile; productRef = C653D6DF26EA357400E6D6EE /* ArgumentParser */; };
+		C6998D2726EB6380009A5F91 /* LSKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C653D6BF26E8EDB200E6D6EE /* LSKit.swift */; };
 		C6AF38B726EB5B09001E3AB5 /* ChooserUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AF38B626EB5B09001E3AB5 /* ChooserUIApp.swift */; };
 		C6AF38B926EB5B09001E3AB5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AF38B826EB5B09001E3AB5 /* ContentView.swift */; };
 		C6AF38BB26EB5B0A001E3AB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6AF38BA26EB5B0A001E3AB5 /* Assets.xcassets */; };
@@ -213,6 +214,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6AF38B926EB5B09001E3AB5 /* ContentView.swift in Sources */,
+				C6998D2726EB6380009A5F91 /* LSKit.swift in Sources */,
 				C6AF38B726EB5B09001E3AB5 /* ChooserUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

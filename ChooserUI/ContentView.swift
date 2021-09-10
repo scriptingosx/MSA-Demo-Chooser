@@ -8,10 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
+  let appURLs = LSKit.urls(for: "http")
+  
   var body: some View {
-    Text("Hello, world!")
-      .font(.largeTitle)
-      .padding(32)
+    VStack {
+      ForEach(appURLs, id: \.self) { appURL in
+        Text(appURL.path)
+      }
+    }.padding()
   }
 }
 
