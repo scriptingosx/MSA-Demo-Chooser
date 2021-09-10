@@ -10,6 +10,10 @@
 		C653D6B926E8EAEF00E6D6EE /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C653D6B826E8EAEF00E6D6EE /* main.swift */; };
 		C653D6C026E8EDB200E6D6EE /* LSKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C653D6BF26E8EDB200E6D6EE /* LSKit.swift */; };
 		C653D6E026EA357400E6D6EE /* ArgumentParser in Frameworks */ = {isa = PBXBuildFile; productRef = C653D6DF26EA357400E6D6EE /* ArgumentParser */; };
+		C6AF38B726EB5B09001E3AB5 /* ChooserUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AF38B626EB5B09001E3AB5 /* ChooserUIApp.swift */; };
+		C6AF38B926EB5B09001E3AB5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AF38B826EB5B09001E3AB5 /* ContentView.swift */; };
+		C6AF38BB26EB5B0A001E3AB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6AF38BA26EB5B0A001E3AB5 /* Assets.xcassets */; };
+		C6AF38BE26EB5B0A001E3AB5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6AF38BD26EB5B0A001E3AB5 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +32,11 @@
 		C653D6B526E8EAEF00E6D6EE /* chooser */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = chooser; sourceTree = BUILT_PRODUCTS_DIR; };
 		C653D6B826E8EAEF00E6D6EE /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		C653D6BF26E8EDB200E6D6EE /* LSKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSKit.swift; sourceTree = "<group>"; };
+		C6AF38B426EB5B09001E3AB5 /* Chooser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chooser.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6AF38B626EB5B09001E3AB5 /* ChooserUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooserUIApp.swift; sourceTree = "<group>"; };
+		C6AF38B826EB5B09001E3AB5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C6AF38BA26EB5B0A001E3AB5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C6AF38BD26EB5B0A001E3AB5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +48,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C6AF38B126EB5B09001E3AB5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -46,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				C653D6B726E8EAEF00E6D6EE /* Chooser */,
+				C6AF38B526EB5B09001E3AB5 /* ChooserUI */,
 				C653D6B626E8EAEF00E6D6EE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				C653D6B526E8EAEF00E6D6EE /* chooser */,
+				C6AF38B426EB5B09001E3AB5 /* Chooser.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -65,6 +83,25 @@
 				C653D6BF26E8EDB200E6D6EE /* LSKit.swift */,
 			);
 			path = Chooser;
+			sourceTree = "<group>";
+		};
+		C6AF38B526EB5B09001E3AB5 /* ChooserUI */ = {
+			isa = PBXGroup;
+			children = (
+				C6AF38B626EB5B09001E3AB5 /* ChooserUIApp.swift */,
+				C6AF38B826EB5B09001E3AB5 /* ContentView.swift */,
+				C6AF38BA26EB5B0A001E3AB5 /* Assets.xcassets */,
+				C6AF38BC26EB5B0A001E3AB5 /* Preview Content */,
+			);
+			path = ChooserUI;
+			sourceTree = "<group>";
+		};
+		C6AF38BC26EB5B0A001E3AB5 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				C6AF38BD26EB5B0A001E3AB5 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -90,6 +127,23 @@
 			productReference = C653D6B526E8EAEF00E6D6EE /* chooser */;
 			productType = "com.apple.product-type.tool";
 		};
+		C6AF38B326EB5B09001E3AB5 /* Chooser */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C6AF38C126EB5B0A001E3AB5 /* Build configuration list for PBXNativeTarget "Chooser" */;
+			buildPhases = (
+				C6AF38B026EB5B09001E3AB5 /* Sources */,
+				C6AF38B126EB5B09001E3AB5 /* Frameworks */,
+				C6AF38B226EB5B09001E3AB5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Chooser;
+			productName = ChooserUI;
+			productReference = C6AF38B426EB5B09001E3AB5 /* Chooser.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -101,6 +155,9 @@
 				LastUpgradeCheck = 1300;
 				TargetAttributes = {
 					C653D6B426E8EAEF00E6D6EE = {
+						CreatedOnToolsVersion = 13.0;
+					};
+					C6AF38B326EB5B09001E3AB5 = {
 						CreatedOnToolsVersion = 13.0;
 					};
 				};
@@ -122,9 +179,22 @@
 			projectRoot = "";
 			targets = (
 				C653D6B426E8EAEF00E6D6EE /* chooser */,
+				C6AF38B326EB5B09001E3AB5 /* Chooser */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C6AF38B226EB5B09001E3AB5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6AF38BE26EB5B0A001E3AB5 /* Preview Assets.xcassets in Resources */,
+				C6AF38BB26EB5B0A001E3AB5 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C653D6B126E8EAEF00E6D6EE /* Sources */ = {
@@ -133,6 +203,15 @@
 			files = (
 				C653D6B926E8EAEF00E6D6EE /* main.swift in Sources */,
 				C653D6C026E8EDB200E6D6EE /* LSKit.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C6AF38B026EB5B09001E3AB5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6AF38B926EB5B09001E3AB5 /* ContentView.swift in Sources */,
+				C6AF38B726EB5B09001E3AB5 /* ChooserUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +357,64 @@
 			};
 			name = Release;
 		};
+		C6AF38BF26EB5B0A001E3AB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ChooserUI/Preview Content\"";
+				DEVELOPMENT_TEAM = JME5BW3F3R;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.scriptingosx.ChooserUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		C6AF38C026EB5B0A001E3AB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ChooserUI/Preview Content\"";
+				DEVELOPMENT_TEAM = JME5BW3F3R;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.scriptingosx.ChooserUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -295,6 +432,15 @@
 			buildConfigurations = (
 				C653D6BD26E8EAEF00E6D6EE /* Debug */,
 				C653D6BE26E8EAEF00E6D6EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C6AF38C126EB5B0A001E3AB5 /* Build configuration list for PBXNativeTarget "Chooser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C6AF38BF26EB5B0A001E3AB5 /* Debug */,
+				C6AF38C026EB5B0A001E3AB5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
