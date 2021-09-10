@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
-  let appURLs = LSKit.urls(for: "http")
+  let apps = LSKit.applications(for: "http")
   
   var body: some View {
     VStack {
-      ForEach(appURLs, id: \.self) { appURL in
-        Text(appURL.path)
+      ForEach(apps) { app in
+        Text(app.name)
       }
     }.padding()
   }
