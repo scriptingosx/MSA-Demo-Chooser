@@ -11,9 +11,9 @@ struct ContentView: View {
   let apps = LSKit.applications(for: "http")
   
   var body: some View {
-    VStack {
+    HStack {
       ForEach(apps) { app in
-        Text(app.name)
+        AppView(app: app)
       }
     }.padding()
   }
