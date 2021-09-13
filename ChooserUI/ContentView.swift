@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct ContentView: View {
-  let apps = LSKit.applications(for: "http")
-  @State var selectedApp = LSKit.defaultApplication(for: "http")
+  @AppStorage("urlScheme") static var urlScheme = "http"
+  
+  let apps = LSKit.applications(for: urlScheme)
+  @State var selectedApp = LSKit.defaultApplication(for: urlScheme)
   
   var body: some View {
     VStack {
@@ -20,7 +22,7 @@ struct ContentView: View {
       }.padding()
       Button(action: {
         if let id = selectedApp?.id {
-          LSKit.setDefault(identifier: id, for: "http")
+          LSKit.setDefault(identifier: id, for: ContentView.urlScheme)
           NSApp.terminate(self)
         }
       }) {
