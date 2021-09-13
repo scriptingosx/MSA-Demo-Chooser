@@ -12,11 +12,23 @@ struct ContentView: View {
   @State var selectedApp = LSKit.defaultApplication(for: "http")
   
   var body: some View {
-    HStack {
-      ForEach(apps) { app in
-        AppView(app: app, selection: $selectedApp)
+    VStack {
+      HStack {
+        ForEach(apps) { app in
+          AppView(app: app, selection: $selectedApp)
+        }
+      }.padding()
+      Button(action: {
+        if let id = selectedApp?.id {
+          LSKit.setDefault(identifier: id, for: "http")
+          NSApp.terminate(self)
+        }
+      }) {
+        Text("Set Default…")
       }
-    }.padding()
+      .padding(10.0)
+      .keyboardShortcut(/*@START_MENU_TOKEN@*/.defaultAction/*@END_MENU_TOKEN@*/)
+    }
   }
 }
 
