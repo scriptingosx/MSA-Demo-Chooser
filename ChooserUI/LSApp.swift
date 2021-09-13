@@ -11,7 +11,7 @@ import AppKit
 /**
  An LSApp object represents an application on disk for use this with the LSKit functions.
  */
-struct LSApp : Identifiable {
+struct LSApp : Identifiable, Equatable {
     /** local file URL of the app*/
     let url: URL
     
@@ -57,6 +57,17 @@ struct LSApp : Identifiable {
         self.identifier = self.bundle.bundleIdentifier ?? ""
         self.name = self.bundle.infoDictionary?["CFBundleName"] as? String ?? ""
     }
+    
+    /** convenience init using a file path */
+    init?(path: String) {
+        let appURL = URL(fileURLWithPath: path)
+        self.init(url: appURL)
+    }
+  
+  /** LSApps are equal, when the identifiers are equal */
+  static func == (lhs: LSApp, rhs: LSApp) -> Bool {
+    return lhs.id == rhs.id
+  }
 }
 
 /**
