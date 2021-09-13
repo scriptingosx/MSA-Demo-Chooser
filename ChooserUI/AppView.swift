@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AppView: View {
   var app: LSApp
-  var selection: LSApp?
+  @Binding var selection: LSApp?
   
   var body: some View {
     VStack {
@@ -20,6 +20,9 @@ struct AppView: View {
     }
     .background(Color((app == selection) ? .controlAccentColor : .windowBackgroundColor))
     .clipShape(RoundedRectangle(cornerRadius: 12))
+    .onTapGesture {
+      selection = app
+    }
   }
 }
 
@@ -28,8 +31,10 @@ struct AppView_Previews: PreviewProvider {
   static let safari = LSApp(url: URL(fileURLWithPath: "/Applications/Safari.app"))!
   static let firefox = LSApp(url: URL(fileURLWithPath: "/Applications/Firefox.app"))!
   
+  @State static var selectedApp: LSApp? = safari
+  
   static var previews: some View {
-    AppView(app: safari, selection: safari)
-    AppView(app: firefox, selection: safari)
+    AppView(app: safari, selection: $selectedApp)
+    AppView(app: firefox, selection: $selectedApp)
   }
 }
