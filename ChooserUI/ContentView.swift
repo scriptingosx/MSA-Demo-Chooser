@@ -9,11 +9,12 @@ import SwiftUI
 
 struct ContentView: View {
   let apps = LSKit.applications(for: "http")
+  let selectedApp = LSKit.defaultApplication(for: "http")
   
   var body: some View {
     HStack {
       ForEach(apps) { app in
-        AppView(app: app)
+        AppView(app: app, selection: selectedApp)
       }
     }.padding()
   }

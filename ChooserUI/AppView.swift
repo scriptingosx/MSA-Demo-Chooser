@@ -9,6 +9,7 @@ import SwiftUI
 
 struct AppView: View {
   var app: LSApp
+  var selection: LSApp?
   
   var body: some View {
     VStack {
@@ -17,6 +18,8 @@ struct AppView: View {
         .frame(width: 120.0, height: 120.0)
       Text(app.name)
     }
+    .background(Color((app == selection) ? .controlAccentColor : .windowBackgroundColor))
+    .clipShape(RoundedRectangle(cornerRadius: 12))
   }
 }
 
@@ -26,7 +29,7 @@ struct AppView_Previews: PreviewProvider {
   static let firefox = LSApp(url: URL(fileURLWithPath: "/Applications/Firefox.app"))!
   
   static var previews: some View {
-    AppView(app: safari)
-    AppView(app: firefox)
+    AppView(app: safari, selection: safari)
+    AppView(app: firefox, selection: safari)
   }
 }
